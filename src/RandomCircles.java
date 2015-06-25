@@ -3,7 +3,7 @@ import java.awt.*;
 import java.util.Random;
 
 /**
- * Created by edgar971 on 6/22/15.
+ * Created by Edgar Pino on 6/22/15.
  */
 public class RandomCircles extends JPanel{
     //private variables
@@ -14,7 +14,7 @@ public class RandomCircles extends JPanel{
     public RandomCircles() {
 
         generator = new Random();
-        setBackground(Color.gray);
+        setBackground(Color.white);
         setPreferredSize(new Dimension(MAX_WIDTH, MAX_WIDTH));
 
     }
@@ -22,7 +22,7 @@ public class RandomCircles extends JPanel{
     public void paintComponent(Graphics page) {
         int radius, diameter, x = 0, y = 0;
         super.paintComponent(page);
-        page.setColor(Color.white);
+
 
         for (int counter = 0; counter < NUM_CIRCLES; counter++) {
             //generate random radius
@@ -34,9 +34,9 @@ public class RandomCircles extends JPanel{
             y = MAX_WIDTH / 2- radius;
             //change colors
             if(counter%2 == 0) {
-                page.setColor(Color.blue);
+                page.setColor(Color.red);
             } else {
-                page.setColor(Color.green);
+                page.setColor(Color.black);
             }
 
             //create oval
